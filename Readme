@@ -1,46 +1,37 @@
-División con Decimales usando Operaciones de Desplazamiento de Bits
-Este programa calcula la división de dos números enteros positivos utilizando operaciones de desplazamiento de bits para determinar el cociente y los decimales. La precisión de los decimales está configurada para mostrar hasta 5 dígitos decimales.
+# División con Decimales usando Operaciones de Desplazamiento de Bits
 
-Descripción
-El algoritmo implementado en este programa evita el uso de divisiones tradicionales y en su lugar utiliza operaciones de desplazamiento de bits. Este enfoque es útil para comprender cómo funcionan las divisiones a bajo nivel en sistemas binarios.
+Este programa realiza la división de dos números enteros positivos utilizando **operaciones de desplazamiento de bits** para calcular el cociente y los decimales, mostrando hasta 5 dígitos decimales.
 
-Funcionalidades:
-Ingreso de dos números enteros positivos: El usuario ingresa dos números (a y b).
-Cálculo del cociente: El cociente se calcula utilizando desplazamientos de bits sin el uso de operadores de división (/).
-Cálculo de decimales: Los primeros 5 dígitos decimales son calculados también utilizando operaciones de desplazamiento de bits.
-Manejo de errores: El programa muestra un mensaje de error si se intenta dividir por cero.
-Requisitos
-Python 3.x
-Ejecución
-Para ejecutar este programa, simplemente ejecuta el archivo Python en la terminal o cualquier entorno de desarrollo.
+## Descripción
 
-bash
-Copiar código
-python division_bits.py
-Ejemplo de Uso
-less
-Copiar código
-Ingrese dos números enteros positivos y calcularé la división con decimales usando operaciones de desplazamiento de bits.
-Número a: 10
-Número b: 3
-El cociente de la división es 3.33333
-Pasos
-El programa desplaza el valor de b hacia la izquierda (multiplicación por 2) hasta que sea mayor que a.
-Posteriormente, se desplaza b hacia la derecha (división por 2) y se resta de a cuando sea posible, sumando el valor correspondiente al cociente.
-Finalmente, el programa calcula los decimales multiplicando a por 10 en cada iteración y usando un procedimiento similar para obtener los dígitos decimales.
-Personalización
-Puedes ajustar la precisión de los decimales cambiando el valor de la variable precision en el código:
+El programa evita el uso de operaciones de división tradicionales (`/`) y emplea operaciones de desplazamiento de bits para calcular el cociente y los decimales. Es una implementación interesante para entender la división binaria.
 
-python
-Copiar código
-precision = 5  # Número de decimales
-Consideraciones
-El programa no es capaz de manejar números negativos o decimales en la entrada.
-La precisión está limitada por el número de dígitos decimales que se deseen calcular.
-Contribuciones
-Si deseas contribuir a este proyecto, puedes clonar el repositorio y enviar tus pull requests.
+### Características:
 
-Clonar el repositorio:
-bash
-Copiar código
-git clone <URL_DEL_REPOSITORIO>
+- Ingreso de dos números enteros positivos.
+- Cálculo del cociente sin usar el operador de división.
+- Cálculo de los decimales utilizando desplazamientos de bits.
+- Manejo de divisiones por cero.
+
+## Requisitos
+
+- Python 3.x
+
+## Instrucciones de Uso
+
+Sigue los pasos para ejecutar el programa:
+
+1. Clona este repositorio o copia el código en tu máquina.
+2. Ejecuta el archivo Python desde la terminal:
+
+   ```bash
+   python division_bits.py
+2. **Para fragmentos de código en Python**:
+
+```md
+## Personalización
+
+Si quieres cambiar la cantidad de dígitos decimales, puedes modificar la variable `precision` en el código:
+
+```python
+precision = 5  # Cambia este valor para ajustar la cantidad de decimales
