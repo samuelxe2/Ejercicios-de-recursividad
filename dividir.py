@@ -1,37 +1,17 @@
-def dividir_con_enteros(a, b, temp):
-    if b > a:
+def division(dividendo, divisor):
+    if divisor == 0:
+        raise ValueError("El divisor no puede ser 0")
+    
+    if dividendo < divisor:
         return 0
-    b <<= 1
-    temp <<= 1
-    cociente = dividir_con_enteros(a, b, temp)
-    b >>= 1
-    temp >>= 1
-    if a >= b:
-        a -= b
-        cociente += temp
-    return cociente
+    
+    return 1 + division(dividendo - divisor, divisor)
 
-def dividir_con_decimales(a, b, precision):
-    if precision == 0:
-        return 0
-    a *= 10
-    decimal_digit = 0
-    while a >= b:
-        a -= b
-        decimal_digit += 1
-    return decimal_digit * 10**(precision - 1) + dividir_con_decimales(a, b, precision - 1)
+dividendo = int(input("Ingrese el dividendo: "))
+divisor = int(input("Ingrese el divisor: "))
 
-def dividir(a, b, precision=5):
-    if b == 0:
-        return "División por cero no está definida."
-    temp = 1
-    cociente = dividir_con_enteros(a, b, temp)
-    decimales = dividir_con_decimales(a, b, precision)
-    return f'El cociente de la división es {cociente}.{decimales}'
-
-# Solicitar entrada de usuario
-a = int(input('Número a: '))
-b = int(input('Número b: '))
-
-# Imprimir el resultado
-print(dividir(a, b))
+try:
+    result = division(dividendo, divisor)
+    print(f"El resultado de la division de {dividendo} entre {divisor} es: {result}")
+except ValueError as e:
+    print(e)
