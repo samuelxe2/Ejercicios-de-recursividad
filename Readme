@@ -42,3 +42,14 @@ Sigue los pasos para ejecutar el programa:
     Número b: 3
     El cociente de la división es 3.33333
 ```
+# Multiplicación Recursiva en Python
+
+### Características:
+-Configuración Inicial: El código define la función multiplicar_recursivo que realiza la multiplicación de manera recursiva.
+-Valores de Entrada: Los valores de a y b se asignan manualmente en el código. Puedes cambiar estos valores según sea necesario para diferentes cálculos.
+-Ejecutar el Código: Al ejecutar el script, la función calculará el producto de a y b y mostrará el resultado en la terminal.
+
+## Notas
+-La función está diseñada para manejar números enteros positivos y negativos.
+
+-Puedes modificar los valores de a y b directamente en el código para probar diferentes casos
