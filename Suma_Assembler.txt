@@ -1,8 +1,0 @@
-#Programa para sumar dos numeros decimales y mostrar el resultado
-
-start:
-    MOV A, 25      ; Cargar el primer numero en el registro A (25)
-    ADD A, 17      ; Sumar el segundo numero (17) al registro A
-    MOV B, 0xE8    ; Direccion de memoria para la consola de salida
-    MOV [B], A     ; Mostrar el resultado en la consola
-    HLT            ; Detener el procesador

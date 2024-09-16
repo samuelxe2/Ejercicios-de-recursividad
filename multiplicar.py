@@ -1,17 +1,28 @@
+'''
+Elaborado por: 
+Samuel Antonio Sanchez Peña
+20212020151
+'''
+
 def multiplicar_recursivo(a, b):
     if b == 0:
         return 0
     return a + multiplicar_recursivo(a, b - 1)
-try:
-    a = int(input("Ingrese el primer número (a): "))
-    b = int(input("Ingrese el segundo número (b): "))
-    
-    # Verificar si b es negativo para ajustar el signo
+
+def solicitar_valores():
+    return resultado(int(input("Ingrese el primer número: ")), int(input("Ingrese el segundo número: ")))
+
+def resultado(a, b):
     if b < 0:
-        resultado = -multiplicar_recursivo(a, -b)
+        return a, b, multiplicar_recursivo(a, -b)
     else:
-        resultado = multiplicar_recursivo(a, b)
+        return a, b, multiplicar_recursivo(a, b)
+
+def imprimir_pantalla(valores):
+    print(f"El resultado de {valores[0]} x {valores[1]} es: {valores[2]}")
+
+imprimir_pantalla(solicitar_valores())
     
-    print(f"El resultado de {a} x {b} es: {resultado}")
-except ValueError:
-    print("Por favor, ingrese números enteros válidos.")
+    
+
+
